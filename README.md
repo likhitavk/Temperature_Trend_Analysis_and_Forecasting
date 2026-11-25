@@ -1,1 +1,207 @@
-# Temperature_Trend_Analysis_and_Forecasting
+# 🌡️ Temperature Trend Analysis & Forecasting
+
+## 📌 Project Overview
+
+Temperature Trend Analysis & Forecasting is a data analytics and machine learning project that analyzes historical temperature patterns across different countries and weather stations.
+
+The project focuses on identifying global temperature trends, understanding seasonal variations, comparing temperature patterns across countries, and predicting future temperatures using machine learning and time-series forecasting models.
+
+The project combines **Python, Data Analysis, Data Visualization, and Machine Learning** to transform historical weather data into meaningful insights.
+
+## 🎯 Project Objectives
+
+- Analyze historical temperature trends across different countries.
+- Identify seasonal and monthly temperature variations.
+- Understand the relationship between temperature, latitude, and elevation.
+- Compare temperature patterns across the Northern and Southern Hemispheres.
+- Build machine learning models to forecast temperatures.
+- Evaluate forecasting performance using statistical metrics.
+
+## 🛠️ Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| Python | Data analysis and modeling |
+| Pandas | Data manipulation |
+| NumPy | Numerical operations |
+| Matplotlib | Data visualization |
+| Seaborn | Statistical visualization |
+| Scikit-learn | Machine learning |
+| XGBoost | Temperature prediction |
+| LightGBM | Temperature prediction |
+| Statsmodels | SARIMA forecasting |
+| Jupyter Notebook | Development environment |
+
+## 📂 Project Structure
+
+```text
+Temperature Trend Analysis & Forecasting/
+│
+├── dashboards/
+│   ├── Country_wise_temperature_analysis.png
+│   ├── Global_Temperature_analysis.png
+│   └── Seasonal_and_monthly_temperature_analysis.png
+│
+├── data/
+│   └── Dataset.csv
+│
+├── notebooks/
+│   ├── Data_analysis.ipynb
+│   └── ml_models.ipynb
+│
+└── README.md
+```
+
+## 📊 Dataset Information
+
+The project uses a historical weather dataset containing **50,000 records and 14 columns**.
+
+Important attributes include:
+
+- Station_ID
+- Station_Name
+- Country_Code
+- Latitude
+- Longitude
+- Elevation_m
+- Date
+- Year
+- Month
+- Season
+- Average_Temperature_C
+- Rolling_3M_Avg_C
+- Month_Sin
+- Month_Cos
+
+## 🔍 Project Workflow
+
+### 1. Data Collection
+- Import the historical temperature dataset.
+- Load the dataset using Pandas.
+- Examine the dataset structure and attributes.
+
+### 2. Data Cleaning and Preprocessing
+- Identify missing values.
+- Check duplicate records.
+- Handle invalid elevation values.
+- Create decade and hemisphere features.
+- Sort records by weather station and date.
+
+### 3. Exploratory Data Analysis (EDA)
+
+Perform different analyses to understand temperature patterns:
+
+- Global temperature distribution.
+- Country-wise temperature analysis.
+- Seasonal temperature variations.
+- Monthly temperature trends.
+- Temperature versus latitude analysis.
+- Correlation analysis.
+- Year-wise temperature trends.
+
+### 4. Feature Engineering
+
+Create additional features to improve forecasting performance:
+
+- Temperature anomalies.
+- Monthly climatology.
+- Lag features (1–12 months).
+- Rolling temperature anomaly averages.
+- Calendar features.
+- Hemisphere information.
+- Climate zones.
+
+### 5. Machine Learning and Forecasting
+
+The project implements and compares the following models:
+
+| Model | Category |
+|---|---|
+| Persistence | Baseline |
+| Seasonal Naive | Baseline |
+| Station-Month Climatology | Baseline |
+| Ridge Regression | Linear Regression |
+| Random Forest | Ensemble Learning |
+| XGBoost | Gradient Boosting |
+| LightGBM | Gradient Boosting |
+| SARIMA | Time-Series Forecasting |
+
+### 6. Model Evaluation
+
+The models are evaluated using:
+
+- MAE (Mean Absolute Error)
+- RMSE (Root Mean Squared Error)
+- R² Score
+- Anomaly R²
+
+The forecasting workflow uses chronological training, validation, and testing periods to avoid random time-series data splitting.
+
+## 📈 Data Visualization and Dashboards
+
+The project includes three dashboard visualizations.
+
+### 1. Global Temperature Analysis
+
+### 2. Country-wise Temperature Analysis
+
+### 3. Seasonal and Monthly Temperature Analysis
+
+## ⚙️ Installation and Execution
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/your-username/temperature-trend-analysis.git
+```
+
+### Step 2: Navigate to the Project Directory
+
+```bash
+cd temperature-trend-analysis
+```
+
+### Step 3: Install Required Libraries
+
+```bash
+pip install pandas numpy matplotlib seaborn scikit-learn xgboost lightgbm statsmodels jupyter
+```
+
+### Step 4: Launch Jupyter Notebook
+
+```bash
+jupyter notebook
+```
+
+### Step 5: Execute the Notebooks
+
+1. Open `Data_analysis.ipynb`.
+2. Perform data cleaning and exploratory data analysis.
+3. Generate the cleaned dataset.
+4. Open `ml_models.ipynb`.
+5. Execute the machine learning and forecasting models.
+
+**Note:** Update the dataset paths in the notebooks according to the project folder structure. The machine learning notebook requires the cleaned dataset generated by the data analysis notebook.
+
+## 💡 Key Learning Outcomes
+
+- Practical experience in data preprocessing and exploratory data analysis.
+- Understanding historical temperature patterns.
+- Feature engineering for time-series forecasting.
+- Implementation of multiple machine learning algorithms.
+- Model evaluation and comparison.
+- Creating meaningful data visualizations.
+
+## 🚀 Future Enhancements
+
+- Develop an interactive dashboard using Power BI or Streamlit.
+- Integrate real-time weather data through weather APIs.
+- Improve forecasting accuracy using deep learning models such as LSTM.
+- Develop an interactive country-wise temperature forecasting application.
+- Deploy the forecasting model as a web application.
+
+
+
+---
+
+⭐ If you find this project useful, consider giving this repository a star!
